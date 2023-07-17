@@ -1,31 +1,31 @@
 function contarVocales(frase) {
-    // Convertir la frase a minúsculas para evitar problemas de comparación
+    //convertir en minuscula
     frase = frase.toLowerCase();
     
     let contador = 0;
     let vocales = [];
   
-    // Recorrer cada caracter en la frase
+    // recorre cada caracter en la frase
     for (let i = 0; i < frase.length; i++) {
       let caracter = frase[i];
       
-      // Comprobar si el caracter es una vocal
+      // comprobar si es vocal
       if (esVocal(caracter)) {
         contador++;
         vocales.push(caracter);
       }
     }
   
-    // Mostrar la cantidad de vocales y las vocales encontradas
+    // mostrar resultados
     console.log("Cantidad de vocales: " + contador);
     console.log("Vocales: " + vocales.join(", "));
   }
-  
+//   se define una función llamada esVocal
+// test() se utiliza para verificar si está presente las vocales.
   function esVocal(caracter) {
     return /[aeiou]/.test(caracter);
   }
   
-  // Ejemplo de uso
   const frase = prompt("Ingresa una frase:");
   contarVocales(frase);
   
